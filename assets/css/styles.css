@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* Bootstrap colors */
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+body {
+    font-family: 'Sriracha', cursive;
+}
+.landing {
+    padding: 0px;
+    height: 100vh;
+    overflow-y: hidden;
+}
+.bg-image{
+    background-image: url("../images/bg2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 0;
+    opacity: 0.65;
+}
+.bg-overlay {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.2;
+}
+.bg-text {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    padding: 0rem 2.2rem ;
+    color: var(--bs-white);
+}
+.greeting {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+#search-icon {
+    border-right: 0px;
+    padding-top: .6rem;
+    padding-left: 1.6rem;
+    background-color: var(--bs-white);
+    color: grey;
+}
+.search {
+    border-radius: 50px;
+    line-height: 30px;
+    font-size: 20px;
+}
+.search:focus {
+    outline: none !important;
+    box-shadow: none;
+    border-color: lightgrey;
+}
+#search-input {
+    border-left: 0px;
+    color: grey;
+}
+
+
+/* Media Queries */
+@media (min-width: 376px) {
+    .greeting {
+        font-size: 40px;
+    }
+    .search {
+    line-height: 35px;
+    font-size: 23px;
+}
+}
+@media (min-width: 426px) {
+    .greeting {
+        font-size: 43px;
+    }
+    .search {
+    line-height: 35px;
+    font-size: 25px;
+}
+}
+
+/* Medium devices (tablets, 769px and up) */
+@media (min-width: 769px) {
+    .greeting {
+        font-size: 50px;
+    }
+    .search {
+    line-height: 40px;
+    font-size: 30px;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 1025px) {
+    .greeting {
+        font-size: 75px;
+    }
+    .search {
+    line-height: 50px;
+    font-size: 40px;
+}
+}
+
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1281px) {
+    .greeting {
+        font-size: 100px;
+    }
+    .search {
+    line-height: 85px;
+    font-size: 50px;
+}
+ }
