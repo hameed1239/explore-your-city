@@ -68,6 +68,7 @@ body {
     z-index: 2;
     padding: 0rem 2.2rem ;
     color: var(--bs-white);
+    font-family: 'Yellowtail', cursive;
 }
 .greeting {
     text-align: center;
