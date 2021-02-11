@@ -34,8 +34,9 @@ body {
 }
 .landing {
     padding: 0px;
-    height: 100vh;
-    overflow-y: hidden;
+    width: 100vw;
+    height: 50vh;
+    /* overflow-y: hidden; */
 }
 .bg-image{
     background-image: url("../images/bg2.jpg");
@@ -43,16 +44,16 @@ body {
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    height: inherit;
+    width: inherit;
     position: fixed;
     z-index: 0;
     opacity: 0.65;
 }
 .bg-overlay {
     background-color: black;
-    height: 100vh;
-    width: 100vw;
+    height: inherit;
+    width: inherit;
     position: fixed;
     z-index: 1;
     opacity: 0.2;
@@ -79,27 +80,46 @@ body {
 .selector-for-some-widget {
   box-sizing: content-box;
 }
+.input-group {
+    border-radius: 50px;
+    padding: 0px;
+    background-color: var(--bs-white);
+}
 #search-icon {
+    border-radius: 0px;
     border-right: 0px;
     padding-top: .6rem;
     padding-left: 1.6rem;
-    background-color: var(--bs-white);
     color: grey;
 }
 .search {
-    border-radius: 50px;
     line-height: 30px;
     font-size: 20px;
+    border: 0px;
+    background-color: transparent;
 }
 .search:focus {
     outline: none !important;
     box-shadow: none;
     border-color: lightgrey;
+    background-color: transparent;
 }
 #search-input {
-    border-left: 0px;
+    border: none;
     color: grey;
+    padding-left: 1.6rem;
 }
+#search-btn {
+    border: 0;
+    padding: 0px;
+}
+#search-btn:focus {
+    outline: none !important;
+    box-shadow: none;
+    border-color: lightgrey;
+    background-color: transparent;
+}
+
 
 
 /* Media Queries */
