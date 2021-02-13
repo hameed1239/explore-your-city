@@ -59,14 +59,14 @@ function getPlaceInfo(xIDs) {
         });
 }// fetch images and place description
 function displayCarousel(response) {
-    $("#result-grid").empty();
+    $(".result-grid").empty();
     response.map((response, index)=> {
         let imgSrc = response.preview.source;
         let pxIndex = imgSrc.lastIndexOf("px");
-        let newImgSrc = imgSrc.replace(`${imgSrc[pxIndex - 3]}${imgSrc[pxIndex - 2]}${imgSrc[pxIndex - 1]}`, "999");
-        var carouselItem = $(`<div class="carousel-item text-center"><img src=${newImgSrc}  class="mx-auto d-block" alt=...><div class="carousel-caption d-none d-md-block"><h2>${response.name}</h2><p>${response.wikipedia_extracts.text}</p></div></div>`)
-        $("#result-grid").append(carouselItem);
-        $(".landing").css("height", "-=50")
+        let newImgSrc = imgSrc.replace(`${imgSrc[pxIndex - 3]}${imgSrc[pxIndex - 2]}${imgSrc[pxIndex - 1]}`, "1920");
+        var carouselItem = $(`<div class="result"><div class="image-container"><img src=${newImgSrc}  class="result-images" alt=...></div><div class="result-text"><h2>${response.name}</h2><p>${response.wikipedia_extracts.text}</p></div></div>`)
+        $(".result-grid").append(carouselItem);
+        $(".landing").attr("hidden", true)
         // if (index === 0) {
         //     $(".carousel-item").addClass("active");
         // }
