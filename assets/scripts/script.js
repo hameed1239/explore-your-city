@@ -39,6 +39,9 @@ let getCoodinates = async (city) => {
                 };
             return coordinates;
         })
+        .catch(error => {
+            console.log("error")
+        })
 }
 
 const getPlacesXID = (coordinates) => {
@@ -56,6 +59,9 @@ const getPlacesXID = (coordinates) => {
             }
             return response
         })
+        .catch(error => {
+        console.log("error")
+    })
     i++;
 }
 
@@ -81,7 +87,8 @@ function displayCards(response) {
             let imgSrc = response.preview.source;
             let pxIndex = imgSrc.lastIndexOf("px");
             let newImgSrc = imgSrc.replace(`${imgSrc[pxIndex - 3]}${imgSrc[pxIndex - 2]}${imgSrc[pxIndex - 1]}`, "1920");
-            var resultCard = $(`<div class="result"><div class="image-container"><img src=${newImgSrc}  class="result-images" alt=... onerror="changeImageSrc(this)"></div><div class="result-text"><h2>${response.name}</h2><p>${response.wikipedia_extracts.text}</p><h3>Address</h3></div></div>`)
+            let address = response.address;
+            var resultCard = $(`<div class="result"><div class="image-container"><img src=${newImgSrc}  class="result-images" alt=${response.name} onerror="changeImageSrc(this)"></div><div class="result-text"><h2>${response.name}</h2><p>${response.wikipedia_extracts.text}</p><h3>Address</h3><p class="address">${address.house_number || ""} ${address.road || ""} ${address.city ||""} ${address.state||""}  ${address.postcode||""}</p></div></div>`)
             $(".result-grid").append(resultCard);
             $(".landing").attr("hidden", true)
             $("nav").attr("hidden", false);
@@ -117,4 +124,9 @@ $(".search-form").on("submit", (event) => {
         // )
 
     }
+})
+
+$(".address").click (function(event) {
+    console.log(event)
+    alert("Hi")
 })
