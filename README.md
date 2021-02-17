@@ -65,11 +65,11 @@ https://developer.mapquest.com
 
 ### Landing Page
 
-![Home Page](assets/images/landing.png)
+![Home Page](assets/images/landing.PNG)
 
 ### Search result Page
 
-![Search result Page](assets/images/search-result.png)
+![Search result Page](assets/images/search-result.PNG)
 
 ## Technologies Used
 
