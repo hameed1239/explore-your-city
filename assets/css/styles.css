@@ -30,7 +30,7 @@
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 body {
-    font-family: 'Sriracha', cursive;
+    font-family: var(--bs-font-sans-serif);
     width: 100%;
     height: 100vh;
 }
@@ -40,7 +40,7 @@ nav {
     text-align: center;
     justify-content: center;
     flex-flow: column nowrap;
-    padding: 20px;
+    padding: 5px;
 }
 .landing {
     padding: 0px;
@@ -78,13 +78,17 @@ nav {
     z-index: 2;
     padding: 0rem 2.2rem ;
     color: var(--bs-white);
-    font-family: 'Yellowtail', cursive;
+    font-family: var(--bs-font-sans-serif);
 }
 .greeting {
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
     font-size: 35px;
+}
+#logo {
+    height: 50px;
+    width: auto;
 }
 .selector-for-some-widget {
     box-sizing: content-box;
@@ -93,6 +97,7 @@ nav {
     border-radius: 50px;
     padding: 0px;
     background-color: var(--bs-white);
+    margin: 0px;
 }
 #search-icon {
     border-radius: 0px;
@@ -107,12 +112,23 @@ nav {
     border: 0px;
     background-color: transparent;
 }
-.search:focus {
+.search:focus  {
     outline: none !important;
     box-shadow: none;
     border: 0px;
     background-color: transparent;
 }
+.input-group {
+    height: inherit;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: grey !important;
+}
+
 #search-input {
     border: none;
     color: grey;
@@ -147,11 +163,8 @@ nav {
 .result-images {
     width: 300px;
 }
-.address {
-    text-decoration: underline;
-}
-.address:hover {
-    cursor: pointer;
+.error {
+    color: red;
 }
 
 /* Media Queries */
@@ -163,6 +176,7 @@ nav {
         line-height: 35px;
         font-size: 23px;
     }
+
 }
 @media (min-width: 426px) {
     .greeting {
@@ -199,6 +213,15 @@ nav {
     .search {
         line-height: 40px;
         font-size: 30px;
+    }
+    nav {
+        padding: 10px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    nav .search {
+        line-height: 30px;
+        font-size: 25px;
     }
     .result {
         grid-template-columns: 440px 1fr;
