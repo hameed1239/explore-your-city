@@ -31,8 +31,7 @@
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Screenshots](#Screenshots)
-- [Technologies Used](#Technologies-Used)
-- [Credits](#Credits)
+- [Technologies Used and Credits](#Technologies-Used-and-Credits)
 - [Roadmap](#Roadmap)
 - [Questions](#Questions)
 - [License](#License)
@@ -71,7 +70,7 @@ https://developer.mapquest.com
 
 ![Search result Page](assets/images/search-result.PNG)
 
-## Technologies Used
+## Technologies Used and Credits
 
 This is a front-end application.
 
@@ -85,9 +84,6 @@ This is a front-end application.
 1. [FontAwesome](https://fontawesome.com/)
 1. [FlatIcon](https://www.flaticon.com/)
 1. [Google Fonts](https://fonts.google.com/)
-
-## Collaborators
-
 
 ## Roadmap
 
